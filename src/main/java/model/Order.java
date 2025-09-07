@@ -8,8 +8,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Builder
 @Getter
@@ -18,10 +16,9 @@ import java.util.UUID;
 @NoArgsConstructor
 @ToString
 public class Order {
-    private String id = UUID.randomUUID().toString();
-    private String customerId = UUID.randomUUID().toString();
-    private LocalDateTime orderDate = LocalDateTime.now();
-    private OrderStatus status = OrderStatus.PENDING;
+    private String id;
+    private String customerId;
+    private OrderStatus status;
     private String productId;
     private BigDecimal totalAmount;
 }
